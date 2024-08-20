@@ -20,7 +20,7 @@ namespace DesafioAsenjo
 
             if (textBox1.Text.Length != 0)
             {
-                int tam, aux, aux2, p = 0;
+                int tam, aux, aux2; int p = 0;
                 char x;
 
 
@@ -30,7 +30,7 @@ namespace DesafioAsenjo
 
                 for (int i = 0; i < tam; i++)
                 {
-                    aux = (int)Math.Pow(2, tam) + 15;
+                    aux = (int)Math.Pow(2, tam) + p + 15;
                     aux2 = (int)(Math.Pow(2, aux) + Math.PI);
 
                     // Pega o caractere correspondente da chave (looping se necessário)
@@ -39,8 +39,8 @@ namespace DesafioAsenjo
                     // Aplica a lógica matemática e adiciona a chave
                     x = (char)(textBox1.Text[i] + aux + aux2 + keyChar);
                     result += x;
-
                     p++;
+
                     if (p == 20)
                     {
                         p = 0;
@@ -68,7 +68,7 @@ namespace DesafioAsenjo
 
                 for (int i = 0; i < tam; i++)
                 {
-                    aux = (int)Math.Pow(2, tam) + 15;
+                    aux = (int)Math.Pow(2, tam) + p + 15;
                     aux2 = (int)(Math.Pow(2, aux) + Math.PI);
 
                     // Pega o caractere correspondente da chave (looping se necessário)
